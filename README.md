@@ -21,7 +21,7 @@ A users logs in and submits a form with 2 inputs which the are first two numbers
        Users endpoints. 
  - [x] Security configure with SpringBoot Security 
  - [x] Create frontend visualisation of fibonacci sequence. 
- - [ ] Create Authentication System 
+ - [x] Create Authentication System 
 
 ## Features
 
