@@ -7,7 +7,7 @@ server:
 spring:
   datasource:
     password: 12345
-    url: jdbc:postgresql://localhost:5432/demo
+    url: jdbc:postgres://utuydkgnabpbvd:e8400dc332055d1d44a072c2c3942afe8bb9bec1a5226e2443d13b738f0765fb@ec2-34-234-240-121.compute-1.amazonaws.com:5432/dbl1cgep7kdqu7
     username: postgres
   jpa:
     hibernate:
