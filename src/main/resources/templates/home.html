@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
   <style>
             * {
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
                 font-size: 100%;
+                font-family: 'Lato', sans-serif;
             }
 
             body {
@@ -63,7 +67,6 @@
             .hero-heading {
                 font-size: 3rem;
                 font-weight: bold;
-                font-family: monospace;
                 text-align: center;
                 margin: 0.6rem 0 2rem 0;
             }
@@ -75,14 +78,12 @@
             }
 
             .hero-links {
-                border-radius: 12px;
                 padding: 2rem;
                 height: 400px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background-color: #ebbf14;
             }
 
             .hero-onboard {
@@ -113,14 +114,6 @@
             .logout-btn:hover {
                 color: gray;
             }
-
-            .white-glassmorphism {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
       </style>
   <title>Fibonacci</title>
 </head>
@@ -130,7 +123,7 @@
     <div sec:authorize="isAuthenticated()">
         <ul class="navbar-links">
             <form th:action="@{/logout}" th:method="delete">
-                <button class="logout-btn" onclick="this.form.submit()">logout</button>
+                <button style="font-weight: bold;" class="logout-btn" onclick="this.form.submit()">logout</button>
             </form>
         </ul>
     </div>

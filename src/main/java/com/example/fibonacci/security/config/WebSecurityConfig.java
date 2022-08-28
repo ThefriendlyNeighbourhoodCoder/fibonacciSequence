@@ -18,14 +18,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final AppUserService appUserService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-        .csrf().disable()
+                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/")
                 .permitAll()
                 .antMatchers("/registration/**")
+                .permitAll()
+                .antMatchers("/login*")
                 .permitAll()
                 .antMatchers("/users")
                 .permitAll()
@@ -33,6 +36,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/fibo")
                 .and()
                 .logout().permitAll();
